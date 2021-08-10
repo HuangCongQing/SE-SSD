@@ -129,7 +129,7 @@ dataset_type = "KittiDataset"
 db_sampler = dict(
     type="GT-AUG",
     enable=True,
-    db_info_path=data_root_prefix + "/KITTI/object/dbinfos_" + my_paras['data_mode'] +".pkl",
+    db_info_path=data_root_prefix + "/root/PCDet/data/kitti/dbinfos_" + my_paras['data_mode'] +".pkl",
     sample_groups=[dict(Car=15,),],
     db_prep_steps=[
         dict(filter_by_min_num_points=dict(Car=5,)),
@@ -198,12 +198,12 @@ test_pipeline = [
 ]
 training_pipeline = test_pipeline if my_paras['eval_training_set'] else train_pipeline
 
-
-data_root = data_root_prefix + "/KITTI/object"
-train_anno = data_root_prefix + "/KITTI/object/kitti_infos_" + my_paras['data_mode'] + ".pkl"
-val_anno = data_root_prefix + "/KITTI/object/kitti_infos_val.pkl"
-test_anno = data_root_prefix + "/KITTI/object/kitti_infos_test.pkl"
-trainval_anno = data_root_prefix + "/KITTI/object/kitti_infos_trainval.pkl"
+# 路径配置
+data_root = data_root_prefix + "/root/PCDet/data/kitti"
+train_anno = data_root_prefix + "/root/PCDet/data/kitti/kitti_infos_" + my_paras['data_mode'] + ".pkl"
+val_anno = data_root_prefix + "/root/PCDet/data/kitti/kitti_infos_val.pkl"
+test_anno = data_root_prefix + "/root/PCDet/data/kitti/kitti_infos_test.pkl"
+trainval_anno = data_root_prefix + "/root/PCDet/data/kitti/kitti_infos_trainval.pkl"
 
 data = dict(
     samples_per_gpu=my_paras['batch_size'],  # batch_size: 4
