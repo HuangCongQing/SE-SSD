@@ -1,0 +1,6 @@
+det3d.egg-info
+build
+.eggs
+det3d/core/iou3d/iou3d.egg-info
+det3d/core/iou3d/dist
+

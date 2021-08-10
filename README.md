@@ -3,6 +3,7 @@
 An accurate and fast single-stage 3D object detection framework on KITTI dataset.
 
 **Authors**: [Wu Zheng](https://github.com/Vegeta2020), Weiliang Tang, [Li Jiang](https://github.com/llijiang), Chi-Wing Fu.
+文档：https://www.yuque.com/huangzhongqing/hre6tf/emt52q
 
 
 ## AP on KITTI Dataset
